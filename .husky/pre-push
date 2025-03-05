@@ -1,0 +1,6 @@
+BLOCKED_DOMAIN="kpler.com"
+
+if git log origin/HEAD..HEAD --pretty=format:"%ae" | grep "@$BLOCKED_DOMAIN"; then
+  echo "❌ Push blocked: Commits contain blocked email domain ($BLOCKED_DOMAIN)"
+  exit 1
+fi
