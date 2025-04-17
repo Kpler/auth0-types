@@ -39,7 +39,7 @@ npm install -D @kpler/auth0-types
 ## Usage (example)
 
 ```ts
-import type { PostLoginApi, PostLoginEvent } from "auth0-types";
+import type { PostLoginApi, PostLoginEvent } from "@kpler/auth0-types";
 
 export const onExecutePostLogin = async (
   event: PostLoginEvent,
