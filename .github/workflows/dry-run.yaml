@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: '22.x'
       - run: npm ci
-      #- run: npx semantic-release --dry-run
+      - run: npx semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm pkg set publishConfig.provenance=false
+      #- run: npm pkg set publishConfig.provenance=false
       - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
