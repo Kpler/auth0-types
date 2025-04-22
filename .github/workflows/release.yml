@@ -3,6 +3,7 @@ name: Release
 permissions:
   contents: write # to be able to publish a GitHub release
   id-token: write # to enable use of OIDC for npm provenance
+  packages: write
 
 on:
   push:
