@@ -165,10 +165,10 @@ export type PostLoginEvent = {
   request: Request;
   resource_server?: EventResourceServer;
   secrets: EventSecrets;
-  session: Session;
+  session?: Session;
   stats: EventStats;
   tenant: EventTenant;
-  transaction: EventBaseTransaction<"oidc-ciba" | "oidc-hybrid-profile"> & {
+  transaction?: EventBaseTransaction<"oidc-ciba" | "oidc-hybrid-profile"> & {
     linking_id?: string;
     requested_authorization_details?: Array<{
       type: string;
