@@ -151,6 +151,8 @@ type User = Pick<
   | "username"
 >;
 
+export type PostLoginUser = User;
+
 export type PostLoginEvent = {
   authentication?: {
     methods: EventBaseAuthenticationMethod[];

@@ -55,6 +55,8 @@ type User = Pick<
   | "user_metadata"
 >;
 
+export type PostChallengeUser = User;
+
 export type PostChallengeEvent = {
   authentication: {
     methods: AuthenticationMethod[];
