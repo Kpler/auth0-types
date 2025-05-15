@@ -21,6 +21,8 @@ type User = Partial<
   >
 >;
 
+export type PostChangePasswordUser = User;
+
 export type PostChangePasswordEvent = {
   connection: EventConnection;
   request: EventBaseRequest;

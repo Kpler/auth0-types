@@ -28,6 +28,8 @@ type User = Pick<
 > &
   Partial<Pick<EventUser<UserIdentity>, "app_metadata" | "identities">>;
 
+export type SendPhoneMessageUser = User;
+
 export type SendPhoneMessageEvent = {
   client: EventClient;
   message_options: {

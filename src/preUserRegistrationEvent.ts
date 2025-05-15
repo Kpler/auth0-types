@@ -26,6 +26,8 @@ type User = Partial<
   >
 >;
 
+export type PreRegistrationUser = User;
+
 export type PreUserRegistrationEvent = {
   client?: EventClient;
   connection: EventConnection;

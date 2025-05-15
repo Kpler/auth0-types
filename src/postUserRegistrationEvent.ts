@@ -28,6 +28,8 @@ type User = Pick<
   | "username"
 >;
 
+export type PostRegistrationUser = User;
+
 export type PostUserRegistrationEvent = {
   connection: EventConnection;
   request?: EventBaseRequest;
