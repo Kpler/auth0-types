@@ -1,4 +1,5 @@
 // https://auth0.com/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object
+// types from examples in https://auth0.com/docs/customize/forms/render
 
 import type {
   ApiAccessDeny,
@@ -8,6 +9,7 @@ import type {
   ApiRedirect,
   ApiSetCustomClaim,
   ApiUser,
+  Dictionary,
 } from "./shared";
 
 type SamlValue = string | number | boolean | null | SamlValue[];
@@ -48,6 +50,12 @@ export type PostLoginApi = {
         };
       },
     ) => PostLoginApi;
+  };
+  prompt: {
+    render: (
+      formId: string,
+      options?: { fields?: Dictionary; vars?: Dictionary },
+    ) => void;
   };
   user: ApiUser<PostLoginApi>;
   redirect: ApiRedirect<PostLoginApi>;
